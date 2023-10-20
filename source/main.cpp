@@ -131,7 +131,6 @@ static void OnInitSwapchain(reshade::api::swapchain *swapchain)
             break;
 
             default:
-                OutputDebugStringA(std::to_string(*(uint32_t*)signature).c_str());
                 std::string errorMessage = "Unsupported version. ";
                 errorMessage += std::to_string(signature);
 
