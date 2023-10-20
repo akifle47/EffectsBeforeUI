@@ -1,0 +1,3 @@
+[submodule "dependencies/injector"]
+	path = dependencies/injector
+	url = https://github.com/thelink2012/injector.git
