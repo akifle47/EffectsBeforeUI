@@ -18,6 +18,14 @@
     <ClInclude Include="dependencies\injector\include\injector\hooking.hpp" />
     <ClInclude Include="dependencies\injector\include\injector\injector.hpp" />
     <ClInclude Include="dependencies\injector\include\injector\utility.hpp" />
+    <ClInclude Include="dependencies\reshade\reshade.hpp" />
+    <ClInclude Include="dependencies\reshade\reshade_api.hpp" />
+    <ClInclude Include="dependencies\reshade\reshade_api_device.hpp" />
+    <ClInclude Include="dependencies\reshade\reshade_api_format.hpp" />
+    <ClInclude Include="dependencies\reshade\reshade_api_pipeline.hpp" />
+    <ClInclude Include="dependencies\reshade\reshade_api_resource.hpp" />
+    <ClInclude Include="dependencies\reshade\reshade_events.hpp" />
+    <ClInclude Include="dependencies\reshade\reshade_overlay.hpp" />
     <ClInclude Include="source\AddonData.h" />
   </ItemGroup>
   <ItemGroup>
