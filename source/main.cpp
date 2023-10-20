@@ -111,12 +111,12 @@ static void OnInitSwapchain(reshade::api::swapchain *swapchain)
     {
         uint32_t signature = (baseAddress - 0x400000) + 0x608C34;
         switch(*(uint32_t*)signature)
-		{
-			//1040
-			case 0x110FF300:
-			    injector::MakeCALL(baseAddress + 0x3C1634, DrawComposite, true);
+        {
+            //1040
+            case 0x110FF300:
+                injector::MakeCALL(baseAddress + 0x3C1634, DrawComposite, true);
                 CPostFX__Draw = (void(*)())(baseAddress + 0x3BFE50);
-			break;
+            break;
 
             //1070
             case 0x1006E857:
@@ -131,6 +131,7 @@ static void OnInitSwapchain(reshade::api::swapchain *swapchain)
             break;
 
             default:
+                OutputDebugStringA(std::to_string(*(uint32_t*)signature).c_str());
                 std::string errorMessage = "Unsupported version. ";
                 errorMessage += std::to_string(signature);
 
