@@ -130,6 +130,12 @@ static void OnInitSwapchain(reshade::api::swapchain *swapchain)
                 CPostFX__Draw = (void(*)())(baseAddress + 0x48C690);
             break;
 
+            //CE
+            case 0x1070FF01:
+                injector::MakeCALL(baseAddress + 0x5303A9, DrawComposite, true);
+                CPostFX__Draw = (void(*)())(baseAddress + 0x52E7C0);
+            break;
+
             default:
                 std::string errorMessage = "Unsupported version. ";
                 errorMessage += std::to_string(signature);
