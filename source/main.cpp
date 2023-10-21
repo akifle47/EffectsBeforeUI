@@ -58,6 +58,7 @@ void __declspec(naked) DrawComposite()
 
     gAddonData.mEffectRuntime->set_effects_state(true);
     gAddonData.mEffectRuntime->render_effects(gAddonData.mCommandList, gAddonData.mRenderTarget, gAddonData.mRenderTargetSrgb);
+    gAddonData.mEffectRuntime->set_effects_state(false);
 
     _asm
     {
