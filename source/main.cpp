@@ -115,26 +115,26 @@ static void OnInitSwapchain(reshade::api::swapchain *swapchain)
         {
             //1040
             case 0x110FF300:
+                CPostFX__Draw = injector::GetBranchDestination(baseAddress + 0x3C1634).get();
                 injector::MakeCALL(baseAddress + 0x3C1634, DrawComposite, true);
-                CPostFX__Draw = (void(*)())(baseAddress + 0x3BFE50);
             break;
 
             //1070
             case 0x1006E857:
+                CPostFX__Draw = injector::GetBranchDestination(baseAddress + 0x483BF8).get();
                 injector::MakeCALL(baseAddress + 0x483BF8, DrawComposite, true);
-                CPostFX__Draw = (void(*)())(baseAddress + 0x482250);
             break;
 
             //1080  
             case 0x404B100F:
+                CPostFX__Draw = injector::GetBranchDestination(baseAddress + 0x48E038).get();
                 injector::MakeCALL(baseAddress + 0x48E038, DrawComposite, true);
-                CPostFX__Draw = (void(*)())(baseAddress + 0x48C690);
             break;
 
             //CE
             case 0x1070FF01:
+                CPostFX__Draw = injector::GetBranchDestination(baseAddress + 0x5303A9).get();
                 injector::MakeCALL(baseAddress + 0x5303A9, DrawComposite, true);
-                CPostFX__Draw = (void(*)())(baseAddress + 0x52E7C0);
             break;
 
             default:
